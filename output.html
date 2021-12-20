@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //alert("uyarı iletişim kutusu");
+        //window.alert("uyarı iletişim kutusu");
+        //alert(2 + 3);
+        //alert(10 * 50);
+        //alert("<b>kalın metin</b>");
+        console.log("konsol uyarısı");
+        //document.write("document metni");
+
+    </script>
+</head>
+
+<body>
+    <p id="paragraf-text"></p>
+    <p id="paragraf-html"></p>
+    <div id="tablo">
+
+    </div>
+    <script>
+        document.getElementById("paragraf-text")
+            .innerText = "lorem ipsum dolor sit amet";
+        document.getElementById("paragraf-html")
+            .innerHTML = "<b>lorem</b> ipsum <i>dolor</i> sit <u>amet</u>";
+        document.getElementById("tablo").innerHTML = '<table border="1" cellspacing="10" cellpadding="10"><tr><td>1</td><td>2</td></tr></table>';
+
+        document.writeln("satır oluşturdum");
+    </script>
+</body>
+
+</html>
