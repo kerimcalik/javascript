@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i = 1;
+        function ButonKontrol() {
+            //let i = 0;
+            console.log(i + " defa tıklandı");
+            i++;
+        }
+
+        function logKey(e) {
+            console.log(e.code);
+        }
+
+        //document.addEventListener('load', ButonKontrol());
+
+        document.addEventListener('load', function (e) {
+            console.log("yüklendi");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <button type="button" onclick="alert('tıklandı')">Tıkla Bana</button> -->
+    <!-- <button type="button" onclick="if(1==2){alert('tıklandı')}else{alert('bu ne iş')}">Tıkla Bana</button> -->
+    <!-- <button type="button" onclick="for(var i=0;i<5;i++){alert(i)}">Tıkla Bana</button> -->
+
+    <p>
+        <button type="button" ondblclick="alert('çift tıklandı')" onclick="ButonKontrol()"
+            onmouseover="console.log('mouse üzerinde')" onmouseout="console.log('mouse nesne dışında')"
+            onotouchstart="console.log(1)">Tıkla Bana</button>
+    </p>
+    <p>
+        <input type="text" name="" id="" onkeypress="console.log('keypress')" onkeydown="console.log('down')"
+            onkeyup="console.log('up')">
+
+    </p>
+    <p ondblclick="alert('çift tıklandı')">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dicta laborum illo mollitia nihil recusandae
+        dolores deserunt non, iusto at doloribus rerum aliquid delectus voluptate, commodi autem nesciunt itaque
+        perspiciatis.
+    </p>
+</body>
+
+</html>

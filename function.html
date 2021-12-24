@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        FonksiyonAdi(5, undefined, 3);
+
+        function FonksiyonAdi(parameter1, parameter2, parameter3) {
+            //alert("merhaba");
+            //alert(parameter1 + parameter3);
+            console.log(parameter1 + parameter2);
+        }
+
+        //FonksiyonAdi(5, undefined, 3);
+
+        function Topla(sayi1, sayi2) {
+            return sayi1 + sayi2;
+        }
+
+        let toplam = "1 ve 2. sayının toplamı = " + Topla(2, 3);
+        console.log(toplam);
+    </script>
+    <script>
+        var personel = {
+            firstName: "önder",
+            lastName: "yiğitalp",
+            fullName: function (parameter1) {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        console.log("Adı:" + personel.firstName);
+        console.log("Adı: " + personel["firstName"]);
+        console.log("Soyadı: " + personel.lastName);
+        console.log("Ad, soyad: " + personel.fullName());
+        console.log(typeof personel.fullName());
+
+        console.log(parseInt("abc123abc"));
+        let sayi = 1000;
+        console.log(sayi.toString());
+        console.log(typeof sayi);
+
+        var isActive = Boolean("True".toLowerCase());
+
+        if (isActive) {
+            console.log("aktif");
+        } else {
+            console.log("pasif");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

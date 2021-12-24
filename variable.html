@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var y = 2;
+
+        function foo() {
+            let x = 1;
+            let z = x + y;
+
+            console.log(z);
+        }
+
+        foo();
+
+        //var 1degisken = 1; hata
+
+        var degisken_1 = "alt tire kullanımı";
+        var $degisken = "";
+        var _degisken = "";
+    </script>
+    <script>
+        var firstName = "adı",
+            lastName = "soyadı",
+            age = 20;
+
+
+        var address; //undefined;
+    </script>
+    <script>
+        const PI = 3.14;
+        const maxLevel = 100;
+        const localIp = "127.0.0.1";
+
+        PI = PI + 10;
+        PI = 22 / 7;
+
+        const cars = ["tofaş", "renault", "mazda"];
+
+        console.log(cars[0]);
+        cars[0] = "mercedes";
+
+        cars.push("honda");
+
+        const car = {
+            brand: "tofaş",
+            model: "şahin",
+            color: "beyaz"
+        };
+
+        console.log(car.brand);
+        car.brand = "renault";
+    </script>
+    <script>
+        {
+            let z = 10;
+            {
+                let z = 5;
+            }
+
+            console.log(z); //10
+        }
+
+
+        var x = 10;
+        {
+            var x = 5;
+        }
+
+        console.log(x); //5
+
+        var s1 = 1; //izin verir
+        let s1 = 2; //izn vermez
+
+        {
+            let x1 = 1; //izin verir
+            var x1 = 2; //izin vermez
+        }
+
+        let y1 = 1;
+        {
+            let y1 = 2;
+            //y1 = 2;
+
+            console.log(y1)
+        }
+
+        console.log(y1)
+    </script>
+    <script>
+        firstName = "adı";
+        var firstName; //hata oluşturur
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
