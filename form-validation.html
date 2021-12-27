@@ -36,12 +36,12 @@
 
     <script>
         function Kaydet() {
-            let name = document.getElementById('name');
+            let name = document.getElementById('name').value;
 
-            if (name.value.length == 0) {
+            if (name.length == 0) {
                 alert("ad kutusunu boş bırakamasınız");
                 return;
-            } else if (name.value.length > 20 || name.value.length < 2) {
+            } else if (name.length > 20 || name.length < 2) {
                 alert("ad kutusu en az 2 en fazla 20 karakter olabilir")
                 return;
             }
