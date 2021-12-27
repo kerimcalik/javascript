@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let txt = 'ABC';
+        let len = txt.length; //string uzunluğu
+
+        console.log(len);
+
+        let str = "lorem ipsum";
+        //slice(start, end)
+        //substring(start, end)
+        //substr(start, length)
+
+        console.log(str.substring(0, 5));
+        console.log(str.slice(6, 11));
+        console.log(str.substr(6, 5));
+
+        console.log(str.substring(6, -5));
+        console.log(str.substring(-5, 11));
+
+        let name = "önder yiğitalp";
+        console.log(name.replace('önder', 'orksilya'));
+
+        name = "önder yiğitlap önder";
+        console.log(name.replace('önder', 'orksilya'));
+        console.log(name.replace(/önder/i, 'orksilya'));
+        console.log(name.replace(/önder/g, 'orksilya'));
+
+        let upper = 'lorem';
+        console.log(upper.toUpperCase());
+
+        let lower = 'LOREM';
+        console.log(lower.toLowerCase());
+
+        let name = "önder";
+        let surname = "yiğitalp";
+        let fullName = name + " " + surname;
+        console.log(name.concat(" ", surname));
+
+        let whiteSpace = "    Lorem     ";
+        //whiteSpace.replace(' ', '');
+        whiteSpace.trim();
+
+        let str = "lorem ipsum dolor sit amet";
+        console.log(str.indexOf('sit'))
+
+        str = "kerim.calik@gmail.com";
+        console.log(str.indexOf('@'));
+        console.log(str.indexOf('.', 20));
+
+        //string şablonları
+
+        let ad = 'ahmet';
+        let soyad = 'mehmet';
+        console.log('hoşgeldiniz ' + ad + ' ' + soyad + '. Bugün nasılsınız?');
+
+        let template = `hoşgeldiniz sayın ${ad} ${soyad}`;
+        console.log(template);
+        template = `hoşgeldiniz sayın ${ad.toUpperCase()} ${soyad.toUpperCase()}`;
+
+        template = `<ul><li>${ad}</li><li>${soyad}</li></ul>`;
+        document.getElementById('liste').innerHTML = template;
+
+        template = `<a href="mailto:deneme@deneme.com>${ad} ${soyad}</a>`;
+        document.getElementById('liste').innerHTML = template;
+    </script>
+</head>
+
+<body>
+    <div id="liste"></div>
+</body>
+
+</html>
