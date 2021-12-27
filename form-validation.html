@@ -6,26 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function Kaydet() {
-            let name = document.getElementById('name');
-
-            if (name.value.length == 0) {
-                alert("ad kutusunu boş bırakamasınız");
-                return;
-            } else if (name.value.length > 20 || name.value.length < 2) {
-                alert("ad kutusu en az 2 en fazla 20 karakter olabilir")
-                return;
-            }
-        }
-    </script>
 </head>
 
 <body>
     <form action="">
         <p>
             <!-- boş olamaz, en 2 en fazla 20 karakter olabilir-->
-            ad:<input type="text" id="name" value="kerim">
+            ad:<input type="text" id="name">
         </p>
         <p>
             <!-- boş olamaz, en 2 en fazla 20 karakter olabilir-->
@@ -43,9 +30,23 @@
             telefon
         </p>
         <p>
-            <button type="button" id="send" onclick="kaydet()">Kaydet</button>
+            <button type="button" id="send" onclick="Kaydet()">Kaydet</button>
         </p>
     </form>
+
+    <script>
+        function Kaydet() {
+            let name = document.getElementById('name');
+
+            if (name.value.length == 0) {
+                alert("ad kutusunu boş bırakamasınız");
+                return;
+            } else if (name.value.length > 20 || name.value.length < 2) {
+                alert("ad kutusu en az 2 en fazla 20 karakter olabilir")
+                return;
+            }
+        }
+    </script>
 </body>
 
 </html>
