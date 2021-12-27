@@ -16,10 +16,35 @@
             left: 0;
         }
     </style>
+    <script>
+        window.onload = function () {
+
+            var x = window.innerWidth;
+            var y = window.innerHeight;
+
+            console.log('x:' + x + ', y:' + y);
+            console.log(document.getElementById('kirmiziKutu'));
+
+            document.getElementById('kirmiziKutu').addEventListener('mouseover', function () {
+
+                var newLeft = Math.floor(Math.random() * (x - this.clientWidth));
+                var newTop = Math.floor(Math.random() * (y - this.clientHeight));
+
+                this.style.top = newTop + 'px';
+                this.style.left = newLeft + 'px';
+                //this.style.width = (this.style.width + 5) + "px";
+                var red = Math.floor(Math.random() * 255);
+                var blue = Math.floor(Math.random() * 255);
+                var green = Math.floor(Math.random() * 255);
+                this.style.backgroundColor = "rgb(" + red + "," + blue + "," + green + ")";
+
+            })
+        }
+    </script>
 </head>
 
 <body>
-    <div class="div"></div>
+    <div class="div" id="kirmiziKutu"></div>
 </body>
 
 </html>
