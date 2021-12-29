@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ["öğe 1", "öğe 2"];
+        console.log(arr[0]);
+
+        arr[0] = "araba";
+        arr.push("furkan");
+
+        //dizinin uzunluğunu verir
+        console.log(arr.length)
+
+        //dizi sıralaması
+        arr.sort();
+        //ters sıralama
+        arr.reverse()
+
+        let dizi = new Array("a", "b", "c");
+
+        let obj = { firstName: "önder", lastname: "yiğitalp" };
+        console.log(obj.firstName);
+
+        window.onload = function () {
+            //let days = ["pazartesi", "salı", "çarşamba"]
+            let days = ["pazartesi", 10, "çarşamba", parseInt("10")]
+            //en son dizi öğesini siler
+            days.pop()
+
+            //document.getElementById("text").innerHTML = days.join(' ');
+            document.getElementById("text").innerHTML = days.toString();
+        }
+
+        let meyve = ["elma", "armut", "kiraz", "elma"];
+        //dizinin ilk öğesini siler
+        meyve.shift()
+        console.log(meyve)
+        meyve.pop()
+        console.log(meyve)
+
+        let harf = ["a", "b"]
+        harf.pop()
+        harf.pop()
+        console.log(harf); //dizinin boş durumu
+        harf.pop()
+        /*harf.pop()
+        harf.pop()
+        harf.pop()
+        harf.pop()
+        harf.pop()
+        harf.pop()*/
+        console.log(harf);
+
+        let dizi1 = ["a", "b"], dizi2 = ["c", "d"], dizi3 = ["e", "f"];
+        dizi4 = dizi1.concat(dizi2, dizi3);
+        console.log(dizi4)
+
+        /*for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }*/
+
+        for (var i = 0; i < dizi1.length; i++) {
+            console.log(dizi1[i]);
+        }
+    </script>
+</head>
+
+<body>
+    <p id="text"></p>
+</body>
+
+</html>

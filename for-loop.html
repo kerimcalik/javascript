@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function FooLi() {
+            var obj = document.getElementById("list");
+            var days = ["Pazartesi", "Salı", "Çaşamba"];
+            var text = "<ul>";
+
+            for (var i = 0; i < days.length; i++) {
+                text += "<li>" + days[i] + "</li>";
+            }
+
+            text += "</ul>";
+
+            obj.innerHTML = text;
+        }
+
+        window.onload = function () {
+            var obj = document.getElementById("list");
+            var table = "<table cellpading='10' border='yes'>";
+
+            for (var i = 0; i < 3; i++) {
+                table += "<tr>";
+
+                for (var j = i * 3; j < (i + 1) * 3; j++) {
+                    table += "<td>" + (j + 1) + "</td>";
+                }
+
+                table += "</tr>";
+            }
+
+            table += "</table>"
+
+            obj.innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="list"></div>
+</body>
+
+</html>
