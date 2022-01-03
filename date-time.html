@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //new Date(yıl, ay, gün, saat, dakika, saniye, milisaniye)
+        // const d = new Date();
+        // alert(d)
+
+        //let date = new Date(2020, 0, 1, 8, 30, 10, 110);
+        // fazla verilen ay değeri 11'den çıkartılarak 
+        // mevcut ay değeri bulunur
+        //let date = new Date(2020, 15, 47);
+        let date = new Date(2020, 15, 47, 24, 70, 10);
+        //console.log(date);
+
+        date = new Date(2022, 0, 3, 20, 52, 30)
+        date = new Date(2022, 0, 3, 20, 52)
+        date = new Date(2022, 0, 3, 20)
+        date = new Date(2022, 0, 3)
+        date = new Date(2022, 0)
+        //console.log(date);
+        //araştıracağım
+        //date = new Date(2022)
+        //console.log(date);
+        date = new Date("3 January 2022, 20:55:30")
+        date = new Date("3 Ocak 2022, 20:55:30") //hata üretir
+        //alert(date);
+        //date = new Date(100000000000);
+        date = new Date();
+        //alert(date);
+
+        //console.log(date.toString());
+        //console.log(date.toUTCString());
+        console.log("Yıl: " + date.getFullYear());
+        console.log("Ay: " + date.getMonth());//0-11 arası
+        console.log("Gün: " + date.getDate());
+        console.log("Saat: " + date.getHours());
+        console.log("Dakika: " + date.getMinutes());
+        console.log("Saniye: " + date.getSeconds());
+        console.log("Salise: " + date.getMilliseconds());
+        console.log("Hafanın günü: " + date.getDay()); //0-6 arası
+
+        window.onload = function () {
+            var obj = document.getElementById("dogumYili");
+            var button = document.getElementById("calc");
+
+            button.addEventListener("click", function () {
+
+                var birthYear = new Date(Date.parse(obj.value)).getFullYear();
+                var currentYear = new Date().getFullYear();
+                var calculateAge = currentYear - birthYear;
+                //var calculateAge = new Date().getFullYear() - obj.value.substr(obj.value.lastIndexOf('.') + 1, 5)
+
+                alert("Yaşınız: " + calculateAge);
+            })
+        }
+
+        var m = 0;
+        function foo() {
+
+            console.log(new Date(2022, m))
+            m++;
+        }
+
+        function foo1() {
+            let x = m < 0 ? 0 : m--;
+
+            console.log(new Date(2022, m))
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="dogumYili" placeholder="01.01.1980">
+    <button id="calc" onclick="foo()">Yaş
+        Hesapla</button>
+    <button id="calc" onclick="foo1()">Yaş
+        Hesapla</button>
+</body>
+
+</html>

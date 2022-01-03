@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function errorControl() {
+            var obj = document.getElementById('name');
+
+            try {
+                if (obj.value == "") throw "ad alanı boş"
+                if (isNaN(obj.value)) throw "sayı değildir"
+
+                x = Number(obj.value)
+
+                if (x > 5) throw "sayı 5'ten büyüktür"
+                if (x == 0) throw "sayı sıfıra eşittir"
+
+            } catch (error) {
+                console.log(error);
+            } finally {
+                console.log("hata yakalama bitti")
+            }
+        }
+
+        window.onload = function () {
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="name">
+    <button onclick="errorControl()">Hata Kontrol</button>
+</body>
+
+</html>
