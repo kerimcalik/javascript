@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function windowOpen() {
+            //window.open('https://www.google.com', '_blank');
+            //window.open('start.html', '_blank');
+            window.open('start.html', '_blank', 'width=450,height=300,resizable=0,menubar=0,toolbar=0,scrollbars=0');
+        }
+
+        function windowClose() {
+            if (window.confirm("Pencereyi kapatmak istediğinizden emin misiniz?")) {
+                window.close()
+            } else {
+                alert("İptal düğmesine tıklandı")
+            }
+
+        }
+
+        function windowPrompt() {
+            let name = window.prompt("Lütfen adınızı yazınız")
+
+            alert(name);
+        }
+
+        function windowLocation() {
+            //window.location.href = "https://www.google.com"
+            console.log(window.location.href);
+        }
+
+        function history(h) {
+            if (h)
+                window.history.back()//window.history(-1);
+            else
+                window.history.forward()
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <button onclick="history(true)">Önceki Sayfa</button>
+        <button onclick="history(false)">Sonraki Sayfa</button>
+    </p>
+    <button onclick="windowOpen()">Pencere Aç</button>
+    <button onclick="windowClose()">Pencere Kapat</button>
+    <button onclick="windowPrompt()">Adınız</button>
+    <button onclick="windowLocation()">Google'a Git</button>
+</body>
+
+</html>

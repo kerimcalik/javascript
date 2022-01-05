@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="saat"></p>
+    <div id="kutu" style="width:50px;height: 50px;position: absolute;background-color: red;top:0;left:500px"></div>
+    <script>
+
+        var interval1 = setInterval(timer, 1000)
+        var interval2 = setInterval(kutuAnimasyonu, 100)
+
+        console.log(interval2);
+
+        let i = 0;
+
+        class Person {
+            constructor(name, surname) {
+                this.name = name;
+                this.surname = surname;
+            }
+            method_1() {
+
+            }
+            method_2() {
+
+            }
+        }
+
+        var person = new Person();
+        person.name = "furkan";
+        person.surname = "alemdaroğlu";
+        person.method_1();
+        person.method_2();
+
+        console.log(person.name);
+
+        function kutuAnimasyonu() {
+
+            //console.log(i);
+            let k = document.getElementById("kutu");
+            i += 5
+            k.style.top = i + "px"
+            k.style.left = i + "px"
+
+            if (i >= 50)
+                clearInterval(interval2)
+        }
+
+        function timer() {
+            let d = new Date();
+            //document.getElementById("saat").innerHTML = d.toLocaleTimeString();
+            document.getElementById("saat").innerHTML = i++;
+        }
+        timer();
+    </script>
+</body>
+
+</html>
